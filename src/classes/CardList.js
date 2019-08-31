@@ -1,7 +1,7 @@
-'use strict';
+import Card from './Card';
 
 // Класс должен уметь: хранить массив каточек (Card), добавлять каточку, удалять карточку, отрисовывать все карточки
-class CardList {
+export default class CardList {
     constructor(placesList, api, imagePopup, myUserId) {
         this.api = api;
         this.cards = [];
@@ -109,6 +109,7 @@ class CardList {
                     break;
                 }
             }
+            // не красиво делать сравнение так как здесь сделано
             const htmlCard = card.create(card.owner._id === this.myUserId, liked);
             this.placesList.insertAdjacentHTML('beforeend', htmlCard);
         }

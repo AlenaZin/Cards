@@ -1,11 +1,11 @@
-'use strict';
+import "./style.css";
+import logoSvg from './images/logo.svg';
+import closeSvg from './images/close.svg';
 
-/**
- * Надо исправить
- * 
- * В классах проекта нет проверки наличия данных в запросе // Исправлено
- * 
- */
+import Popup from './classes/Popup';
+import Api from './classes/Api';
+import CardList from './classes/CardList';
+import UserModule from './classes/UserModule';
 
 const placePopup = new Popup(document.getElementById('popup_new-place'), 'user-info__button');
 const profilePopup = new Popup(document.getElementById('popup_profile'), 'user-info__button_edit');
@@ -82,3 +82,23 @@ form.addEventListener('submit', function (e) {
 });
 
 form.addEventListener('input', validatePopup);
+
+
+
+
+/**
+ * Работа очень хорошая. Особенно порадовала разбивка на модули, неплохо.
+ * Необходимо замените IP адрес для запросов к серверу и вынести отдельно в файл
+ * Так же относится к UserId authorization и так далее
+ * Необходимо добавить сборки для webpack, а не только для deploy
+ * README.md необходимо указать что за проект. Представьте что вы посмотрите этот проект через 5 лет или вам зададут вопрос что за проект
+ * Проект надо развернуть чтобы он открывался по адресу https://имя.github.io/название_репозитория/
+ * 
+ * 
+ * Рекомендации. Любые названия которые прописываете в исходном коде лучше выносить отдельно в некий языковой файл в ввиде массива
+ * Во первыйх вы сможете избежать дублей и переиспользовать
+ * Во вторых если придёт задача добавить ещё один язык вы с элегантностью её решите
+ * 
+ * Ещё раз подчеркну, работа мне очень понравилась. Старайтесь у вас всё получится ;)
+ * @koras
+ */

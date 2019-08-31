@@ -1,7 +1,6 @@
-'use strict';
-
 // Класс карточки, умеет: конструктором инициализировать свойства, лайкать/дизлайкать карточку
-class Card {
+export default class Card {
+    // что за переменные и за что отвечают ?
     constructor(id, likes, name, link, owner) {
         this.id = id || null;
         this.likes = likes || [];
@@ -14,6 +13,7 @@ class Card {
         // TODO: реализовать через API
     }
     // Функция создает одну карточку
+    // что за переменные и за что отвечают ?
     create(withDeleteButton, withLike) {
         withDeleteButton = withDeleteButton || false;
         withLike = withLike || false;

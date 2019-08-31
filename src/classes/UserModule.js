@@ -1,6 +1,6 @@
-'use strict';
+import User from './User';
 
-class UserModule {
+export default class UserModule {
     constructor(profilePopup, domContainer, api) {
         this.profilePopup = profilePopup;
         this.formProfile = profilePopup.domPopup.querySelector('form');
@@ -113,7 +113,7 @@ class UserModule {
             // Можно улучшить - else if {}
             // проверяем длину поля о себе (от 2 до 30 включительно)
             if (info.length < 2 || info.length > 30) {
-                this.errorInfo.textContent = 'Должно быть от 2 до 30 символов';
+                this.errorInfo.textContent = 'Должно быть от 2 до 30 символов'; // дублируете, вынесете отдельно
                 isValid = false;
             }
         }
@@ -125,3 +125,4 @@ class UserModule {
         }
     };
 }
+ 
