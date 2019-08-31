@@ -1,6 +1,6 @@
-'use strict';
+import User from './User';
 
-class UserModule {
+export default class UserModule {
     constructor(profilePopup, domContainer, api) {
         this.profilePopup = profilePopup;
         this.formProfile = profilePopup.domPopup.querySelector('form');

@@ -1,7 +1,7 @@
-'use strict';
+import Card from './Card';
 
 // Класс должен уметь: хранить массив каточек (Card), добавлять каточку, удалять карточку, отрисовывать все карточки
-class CardList {
+export default class CardList {
     constructor(placesList, api, imagePopup, myUserId) {
         this.api = api;
         this.cards = [];

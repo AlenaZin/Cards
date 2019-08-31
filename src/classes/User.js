@@ -1,6 +1,4 @@
-'use strict';
-
-class User {
+export default class User {
     constructor(id, name, about, avatar) {
         this.id = id || null;
         this.name = name || null;

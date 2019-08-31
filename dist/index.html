@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="style.9311142bbdb038b76703.css?73b2d33dc435fb7a98ac">
+</head>
+
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data"></div>
+        <button class="button user-info__button_edit">Edit</button>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+
+    <div class="places-list root__section"></div>
+
+    <div class="popup" id="popup_new-place">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="" class="popup__close" id="popup_new-place-close">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="new">
+          <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название" required/>
+          <div class="popup__error" id="popup__input_type_name-error"></div>
+          <input type="text" name="link" class="popup__input popup__input_type_link-url" required
+            placeholder="Ссылка на картинку" />
+            <div class="popup__error" id="popup__input_type_link-error"></div>
+          <button type class="button popup__button" id="popup_new-place-submit" disabled>+</button>
+        </form>
+      </div>
+  </div>
+
+  <div class="popup user" id="popup_profile">
+    <div class="popup__content">
+      <img src="./images/close.svg" alt="" class="popup__close" id="popup_profile-close">
+      <h3 class="popup__title">Редактировать профиль</h3>
+      <form class="popup__form" name="profile">
+        <input type="text" name="profile" class="popup__input popup__input_type_profile" placeholder="Имя" />
+        <div class="popup__error user__error-name" id="popup__input_type_profile-error"></div>
+        <input type="text" name="info" class="popup__input popup__input_type_info"
+          placeholder="О себе" />
+          <div class="popup__error user__error-info" id="popup__input_type_info-error"></div>
+        <button type class="button popup__button" id="popup_profile-submit" disabled>Сохранить</button>
+      </form>
+    </div>
+</div>
+
+<div class="popup" id="popup_image">
+  <div class="popup__content with-picture">
+    <img src="./images/close.svg" alt="" class="popup__close" id="popup_image-close">
+    <img src="" alt="" class="popup__picture"/>
+  </div>
+</div>
+
+<script src="main.8b771845fe5b4ea37b5a.js?73b2d33dc435fb7a98ac"></script>
+</body>
+
+</html>

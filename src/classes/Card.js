@@ -1,7 +1,5 @@
-'use strict';
-
 // Класс карточки, умеет: конструктором инициализировать свойства, лайкать/дизлайкать карточку
-class Card {
+export default class Card {
     constructor(id, likes, name, link, owner) {
         this.id = id || null;
         this.likes = likes || [];

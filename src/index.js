@@ -1,11 +1,11 @@
-'use strict';
+import "./style.css";
+import logoSvg from './images/logo.svg';
+import closeSvg from './images/close.svg';
 
-/**
- * Надо исправить
- * 
- * В классах проекта нет проверки наличия данных в запросе // Исправлено
- * 
- */
+import Popup from './classes/Popup';
+import Api from './classes/Api';
+import CardList from './classes/CardList';
+import UserModule from './classes/UserModule';
 
 const placePopup = new Popup(document.getElementById('popup_new-place'), 'user-info__button');
 const profilePopup = new Popup(document.getElementById('popup_profile'), 'user-info__button_edit');
