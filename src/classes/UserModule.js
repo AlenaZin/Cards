@@ -1,6 +1,7 @@
-'use strict';
+import User from './User';
+import errors from '../localization/ru/Errors';
 
-class UserModule {
+export default class UserModule {
     constructor(profilePopup, domContainer, api) {
         this.profilePopup = profilePopup;
         this.formProfile = profilePopup.domPopup.querySelector('form');
@@ -96,24 +97,24 @@ class UserModule {
 
         // проверяем заполненность поля имя
         if (profile.length === 0) {
-            this.errorName.textContent = 'Это обязательное поле';
+            this.errorName.textContent = errors.required;
             isValid = false;
         } else {
             // проверяем длину поля имя (от 2 до 30 включительно)
             if (profile.length < 2 || profile.length > 30) {
-                this.errorName.textContent = 'Должно быть от 2 до 30 символов';
+                this.errorName.textContent = errors.nameLength;
                 isValid = false;
             }
         }
         // проверяем заполненность поля о себе
         if (info.length === 0) {
-            this.errorInfo.textContent = 'Это обязательное поле';
+            this.errorInfo.textContent = errors.required;
             isValid = false;
         } else {
             // Можно улучшить - else if {}
             // проверяем длину поля о себе (от 2 до 30 включительно)
             if (info.length < 2 || info.length > 30) {
-                this.errorInfo.textContent = 'Должно быть от 2 до 30 символов';
+                this.errorInfo.textContent = errors.nameLength;
                 isValid = false;
             }
         }

@@ -1,11 +1,12 @@
-'use strict';
+import "./style.css";
+import logoSvg from './images/logo.svg';
+import closeSvg from './images/close.svg';
 
-/**
- * Надо исправить
- * 
- * В классах проекта нет проверки наличия данных в запросе // Исправлено
- * 
- */
+import Popup from './classes/Popup';
+import Api from './classes/Api';
+import CardList from './classes/CardList';
+import UserModule from './classes/UserModule';
+import config from './configs/config';
 
 const placePopup = new Popup(document.getElementById('popup_new-place'), 'user-info__button');
 const profilePopup = new Popup(document.getElementById('popup_profile'), 'user-info__button_edit');
@@ -17,10 +18,12 @@ const newPlaceSubmitButton = document.getElementById('popup_new-place-submit');
 const newPlaceNameError = document.getElementById('popup__input_type_name-error');
 const newPlaceLinkError = document.getElementById('popup__input_type_link-error');
 
+const baseHost = process.env.NODE_ENV === 'production' ? config.baseHostProd : config.baseHostDev;
+
 const api = new Api({
-    baseUrl: 'http://95.216.175.5/cohort1',
+    baseUrl: `${baseHost}/cohort1`,
     headers: {
-      authorization: '60f28af5-fb65-4707-b683-9c36600510df',
+      authorization: config.authorizationToken,
       'Content-Type': 'application/json'
     }
   });
