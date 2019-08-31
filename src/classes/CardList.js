@@ -109,6 +109,7 @@ export default class CardList {
                     break;
                 }
             }
+            // не красиво делать сравнение так как здесь сделано
             const htmlCard = card.create(card.owner._id === this.myUserId, liked);
             this.placesList.insertAdjacentHTML('beforeend', htmlCard);
         }

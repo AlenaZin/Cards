@@ -1,3 +1,4 @@
+// Какая цель у этого класса ?
 export default class User {
     constructor(id, name, about, avatar) {
         this.id = id || null;
