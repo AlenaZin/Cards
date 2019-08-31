@@ -109,7 +109,8 @@ export default class CardList {
                     break;
                 }
             }
-            const htmlCard = card.create(card.owner._id === this.myUserId, liked);
+            const withDeleteButton = card.owner._id === this.myUserId;
+            const htmlCard = card.create(withDeleteButton, liked);
             this.placesList.insertAdjacentHTML('beforeend', htmlCard);
         }
     }

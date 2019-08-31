@@ -1,8 +1,22 @@
-# Развернуть проект локально
-> git clone -b modules https://github.com/AlenaZin/startkit.git
-> cd startkit
-> npm install
-> npm run dev
+# Проектная работа: карточки с местами и с профилем участника. 
+### Функционал сайта
+Список карточек, добавление и удаление карточек, лайки карточек, редактирование профиля, работа по API
 
-# Собрать проект для продакшена
-> npm run build
+### Репозиторий
+> https://github.com/AlenaZin/codes.git
+
+### Сайт продакшн релиз
+> ...
+
+### Развернуть проект локально
+```
+git clone -b modules https://github.com/AlenaZin/codes.git
+cd startkit
+npm install
+npm run dev
+```
+
+### Собрать проект для продакшена
+```
+npm run build
+```
